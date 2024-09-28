@@ -1,30 +1,19 @@
 ![](https://github.com/is-leeroy-jenkins/Cammy/blob/main/Resources/Assets/GitHubImages/Cammy.png)
 
-## Cammie is a tool that displays a webcam feed in a WPF Application. Cammie can also be used to directly scan a QR Code when displayed in front of the camera. Cammis is written in C# and released under the MIT license.
+## Cammy is a tool that displays a webcam feed in a WPF Application. Cammy can also be used to directly scan a QR Code when displayed in front of the camera. Cammy is written in C# and released under the MIT license.
 
 ####
 
 ## ![](https://github.com/is-leeroy-jenkins/Cammy/blob/main/Resources/Assets/GitHubImages/features.png) Features
 
 - Mutliple data providers.
-- Charting and reporting.
-- Internal web browser, [Baby](https://github.com/is-leeroy-jenkins/Baby/blob/main/README.md),  with queries optimized for searching .gov domains.
-- Pre-defined schema for moret than 100 environmental data models.
-- Editors for SQLite, SQL Compact Edition, MS Access, SQL Server Express.
-- Excel-ish UI on top of a real databases.
-- Mapping for congressional earmark reporting and montioring of polluction sites.
-- Finanical data bound to environmental programs and statutory authority.
+- Editors for SQLite, SQL Compact Edition
 - Ad-hoc calculations.
-- Add agency/region/division-specific branding.
-- The winforms version of Cammy is [Sherpa](https://github.com/is-leeroy-jenkins/Sherpa?tab=readme-ov-file) 
 
 ## ![](https://github.com/is-leeroy-jenkins/Cammy/blob/main/Resources/Assets/GitHubImages/Providers.png) Providers
 
 - [SQLite](https://sqlite.org/index.html) is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. 
 - [SQL CE](https://www.microsoft.com/en-us/download/details.aspx?id=30709) is a discontinued but still useful relational database produced by Microsoft for applications that run on mobile devices and desktops. 
-- [SQL Server Express Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) is a scaled down, free edition of SQL Server, which includes the core database engine.
-- MS Access is a database management system (DBMS) from Microsoft that combines the relational Access Database Engine (ACE) with a graphical user interface and software-development tools. [more here](https://www.microsoft.com/en-us/microsoft-365/access)
-
 
 ## ![](https://github.com/is-leeroy-jenkins/Cammy/blob/main/Resources/Assets/GitHubImages/system_requirements.png) System requirements
 
@@ -46,7 +35,7 @@
 
 ## ![](https://github.com/is-leeroy-jenkins/Cammy/blob/main/Resources/Assets/GitHubImages/csharp.png) Code
 
-- Cammy uses CefSharp 106 for Baby Browser and is built on NET 6
+- Cammy is built on NET 8
 - Cammy supports AnyCPU as well as x86/x64 specific builds
 - [Controls](https://github.com/is-leeroy-jenkins/Cammy/tree/main/Controls) - main UI layer and associated controls and related functionality.
 - [Enumerations](https://github.com/is-leeroy-jenkins/Cammy/tree/main/Enumerations) - various enumerations used for budgetary accounting.

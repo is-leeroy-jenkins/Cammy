@@ -1,0 +1,408 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <Optimize>True</Optimize>
+    <WarningLevel>6</WarningLevel>
+    <DebugType>embedded</DebugType>
+    <NoWarn>1701;1702;CA1822</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject></StartupObject>
+    <Nullable>disable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>embedded</DebugType>
+    <WarningLevel>6</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LinqStatistics">
+      <HintPath>Libraries\LinqStatistics\LinqStatistics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\System.Data\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\System.Data\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\System.Data\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\System.Data\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing">
+      <HintPath>Libraries\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation">
+      <HintPath>Libraries\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Github\Compilation.md" />
+    <None Include="Resources\Github\Configuration.md" />
+    <None Include="Resources\Github\Distribution.md" />
+    <None Include="Resources\Github\Users.md" />
+    <Resource Include="UI\Fonts\Anonymous Pro.ttf" />
+    <Resource Include="UI\Fonts\Hack-Regular.ttf" />
+    <Resource Include="UI\Fonts\JetBrainsMono-Regular.ttf" />
+    <Resource Include="UI\Fonts\Monaco.ttf" />
+    <Resource Include="UI\Fonts\Roboto-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Emgu.CV">
+      <Version>4.9.0.5494</Version>
+    </PackageReference>
+    <PackageReference Include="Emgu.CV.Bitmap">
+      <Version>4.9.0.5494</Version>
+    </PackageReference>
+    <PackageReference Include="Emgu.CV.runtime.windows">
+      <Version>4.9.0.5494</Version>
+    </PackageReference>
+    <PackageReference Include="EPPlus" Version="7.3.2" />
+    <PackageReference Include="EPPlus.System.Drawing" Version="6.1.1" />
+    <PackageReference Include="Google.Apis.CustomSearchAPI.v1" Version="1.68.0.3520" />
+    <PackageReference Include="MahApps.Metro" Version="2.4.10" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net48" Version="1.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Office.Interop.Outlook" Version="15.0.4797.1004" />
+    <PackageReference Include="ModernWpfUI" Version="0.9.6" />
+    <PackageReference Include="SkiaSharp" Version="2.88.8" />
+    <PackageReference Include="Syncfusion.Licensing">
+      <Version>24.1.41</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.SfSkinManager.WPF">
+      <Version>24.1.41</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Shared.Base">
+      <Version>24.1.41</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Tools.WPF">
+      <Version>24.1.41</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.UI.WPF.NET" Version="27.1.50" />
+    <PackageReference Include="System.Data.Common">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.OleDb" Version="8.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+    <PackageReference Include="ToastNotifications.Messages.Net6" Version="1.0.4" />
+    <PackageReference Include="ToastNotifications.Net6" Version="1.0.4" />
+    <PackageReference Include="ZXing.Net">
+      <Version>0.16.9</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\sound_ok.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Assets\ApplicationImages\access.png" />
+    <Resource Include="Resources\Assets\ApplicationImages\DataTable.png" />
+    <Resource Include="Resources\Assets\ApplicationImages\Download.png" />
+    <Resource Include="Resources\Assets\ApplicationImages\favicon.ico" />
+    <Resource Include="Resources\Assets\ApplicationImages\favicon.png" />
+    <Resource Include="Resources\Assets\ApplicationImages\IP.png" />
+    <Resource Include="Resources\Assets\ApplicationImages\n-icon.ico" />
+    <Resource Include="Resources\Assets\ApplicationImages\port.png" />
+    <Resource Include="Resources\Assets\ApplicationImages\portlisten.png" />
+    <Resource Include="Resources\Assets\ApplicationImages\reload.png" />
+    <Resource Include="Resources\Assets\ApplicationImages\route.png" />
+    <Resource Include="Resources\Assets\ApplicationImages\servers.png" />
+    <Resource Include="Resources\Assets\ApplicationImages\sniffer.png" />
+    <Resource Include="Resources\Assets\ApplicationImages\Speed.png" />
+    <Resource Include="Resources\Assets\CalculatorImages\Cancel.png" />
+    <Resource Include="Resources\Assets\CalculatorImages\Main.png" />
+    <Resource Include="Resources\Assets\DialogImages\AddColumnButton.png" />
+    <Resource Include="Resources\Assets\DialogImages\AddRecordButton.png" />
+    <Resource Include="Resources\Assets\DialogImages\AddTableButton.png" />
+    <Resource Include="Resources\Assets\DialogImages\ApplicationError.ico" />
+    <Resource Include="Resources\Assets\DialogImages\Calendar.png" />
+    <Resource Include="Resources\Assets\DialogImages\ColumnConfiguration.png" />
+    <Resource Include="Resources\Assets\DialogImages\CopyRecordButton.png" />
+    <Resource Include="Resources\Assets\DialogImages\DataSettings.png" />
+    <Resource Include="Resources\Assets\DialogImages\DeleteColumnButton.png" />
+    <Resource Include="Resources\Assets\DialogImages\DeleteRecordButton.png" />
+    <Resource Include="Resources\Assets\DialogImages\DeleteTableButton.png" />
+    <Resource Include="Resources\Assets\DialogImages\EditColumnButton.png" />
+    <Resource Include="Resources\Assets\DialogImages\EditRecordButton.png" />
+    <Resource Include="Resources\Assets\DialogImages\EditSqlButton.png" />
+    <Resource Include="Resources\Assets\DialogImages\Error.ico" />
+    <Resource Include="Resources\Assets\DialogImages\Error.png" />
+    <Resource Include="Resources\Assets\DialogImages\ErrorDialog.png" />
+    <Resource Include="Resources\Assets\DialogImages\Error_16.png" />
+    <Resource Include="Resources\Assets\DialogImages\Error_64.png" />
+    <Resource Include="Resources\Assets\DialogImages\FileBrowse.png" />
+    <Resource Include="Resources\Assets\DialogImages\FolderBrowse.png" />
+    <Resource Include="Resources\Assets\DialogImages\InputDialog.png" />
+    <Resource Include="Resources\Assets\DialogImages\MenuDialog.png" />
+    <Resource Include="Resources\Assets\DialogImages\Message.ico" />
+    <Resource Include="Resources\Assets\DialogImages\Message.png" />
+    <Resource Include="Resources\Assets\DialogImages\SplashNotification.png" />
+    <Resource Include="Resources\Assets\DialogImages\TextDialog.png" />
+    <Resource Include="Resources\Assets\ExtensionImages\ACCDB.png" />
+    <Resource Include="Resources\Assets\ExtensionImages\CSV.png" />
+    <Resource Include="Resources\Assets\ExtensionImages\DB.png" />
+    <Resource Include="Resources\Assets\ExtensionImages\DLL.png" />
+    <Resource Include="Resources\Assets\ExtensionImages\DOC.png" />
+    <Resource Include="Resources\Assets\ExtensionImages\DOCX.png" />
+    <Resource Include="Resources\Assets\ExtensionImages\EXE.png" />
+    <Resource Include="Resources\Assets\ExtensionImages\HTML.png" />
+    <Resource Include="Resources\Assets\ExtensionImages\MDB.png" />
+    <Resource Include="Resources\Assets\ExtensionImages\MDF.png" />
+    <Resource Include="Resources\Assets\ExtensionImages\PDF.png" />
+    <Resource Include="Resources\Assets\ExtensionImages\PNG.png" />
+    <Resource Include="Resources\Assets\ExtensionImages\PPTX.png" />
+    <Resource Include="Resources\Assets\ExtensionImages\PY.png" />
+    <Resource Include="Resources\Assets\ExtensionImages\SDF.png" />
+    <Resource Include="Resources\Assets\ExtensionImages\SQL.png" />
+    <Resource Include="Resources\Assets\ExtensionImages\TXT.png" />
+    <Resource Include="Resources\Assets\ExtensionImages\XLS.png" />
+    <Resource Include="Resources\Assets\ExtensionImages\XLSX.png" />
+    <Resource Include="Resources\Assets\ExtensionImages\XML.png" />
+    <Resource Include="Resources\Assets\FileImages\Add.png" />
+    <Resource Include="Resources\Assets\FileImages\Bin.png" />
+    <Resource Include="Resources\Assets\FileImages\Copy.png" />
+    <Resource Include="Resources\Assets\FileImages\CSV.png" />
+    <Resource Include="Resources\Assets\FileImages\Delete.png" />
+    <Resource Include="Resources\Assets\FileImages\DLL.png" />
+    <Resource Include="Resources\Assets\FileImages\DOC.png" />
+    <Resource Include="Resources\Assets\FileImages\Download.png" />
+    <Resource Include="Resources\Assets\FileImages\Edit.png" />
+    <Resource Include="Resources\Assets\FileImages\EditFile.png" />
+    <Resource Include="Resources\Assets\FileImages\EditTable.png" />
+    <Resource Include="Resources\Assets\FileImages\Excel.png" />
+    <Resource Include="Resources\Assets\FileImages\EXE.png" />
+    <Resource Include="Resources\Assets\FileImages\Export.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\Add.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\Bin.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\Copy.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\CSV.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\Delete.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\DLL.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\DOC.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\Edit.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\Export.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\HTML.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\Import.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\Lock.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\PDF.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\PNG.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\Py.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\Save.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\Search.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\SQL.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\TXT.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\XLS.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\XML.png" />
+    <Resource Include="Resources\Assets\FileImages\FileImages\ZIP.png" />
+    <Resource Include="Resources\Assets\FileImages\HTML.png" />
+    <Resource Include="Resources\Assets\FileImages\Import.png" />
+    <Resource Include="Resources\Assets\FileImages\Lock.png" />
+    <Resource Include="Resources\Assets\FileImages\Log.png" />
+    <Resource Include="Resources\Assets\FileImages\PDF.png" />
+    <Resource Include="Resources\Assets\FileImages\PNG.png" />
+    <Resource Include="Resources\Assets\FileImages\Py.png" />
+    <Resource Include="Resources\Assets\FileImages\Save.png" />
+    <Resource Include="Resources\Assets\FileImages\Search.png" />
+    <Resource Include="Resources\Assets\FileImages\SQL.png" />
+    <Resource Include="Resources\Assets\FileImages\TXT.png" />
+    <Resource Include="Resources\Assets\FileImages\VerifyData1.png" />
+    <Resource Include="Resources\Assets\FileImages\Word.png" />
+    <Resource Include="Resources\Assets\FileImages\XLS.png" />
+    <Resource Include="Resources\Assets\FileImages\XML.png" />
+    <Resource Include="Resources\Assets\FileImages\ZIP.png" />
+    <Resource Include="Resources\Assets\FolderImages\Browse.png" />
+    <Resource Include="Resources\Assets\FolderImages\Delete.png" />
+    <Resource Include="Resources\Assets\FolderImages\Directories.png" />
+    <Resource Include="Resources\Assets\FolderImages\Directory.png" />
+    <Resource Include="Resources\Assets\FolderImages\Download.png" />
+    <Resource Include="Resources\Assets\FolderImages\GoogleDrive.png" />
+    <Resource Include="Resources\Assets\FolderImages\icons8_add_folder_18px.png" />
+    <Resource Include="Resources\Assets\FolderImages\icons8_delete_folder_18px.png" />
+    <Resource Include="Resources\Assets\FolderImages\icons8_downloads_folder_18px.png" />
+    <Resource Include="Resources\Assets\FolderImages\icons8_edit_folder_18px.png" />
+    <Resource Include="Resources\Assets\FolderImages\icons8_save_archive_18px.png" />
+    <Resource Include="Resources\Assets\FolderImages\icons8_search_folder_18px.png" />
+    <Resource Include="Resources\Assets\FolderImages\Import.png" />
+    <Resource Include="Resources\Assets\FolderImages\NetworkShared.png" />
+    <Resource Include="Resources\Assets\FolderImages\Open.png" />
+    <Resource Include="Resources\Assets\FolderImages\Search.png" />
+    <Resource Include="Resources\Assets\FolderImages\Tree.png" />
+    <Resource Include="Resources\Assets\FolderImages\ZIP.png" />
+    <Resource Include="Resources\Assets\FormImages\AccessData.png" />
+    <Resource Include="Resources\Assets\FormImages\AddColumn.png" />
+    <Resource Include="Resources\Assets\FormImages\AddRow.png" />
+    <Resource Include="Resources\Assets\FormImages\AppIcon.ico" />
+    <Resource Include="Resources\Assets\FormImages\Application.ico" />
+    <Resource Include="Resources\Assets\FormImages\Application.png" />
+    <Resource Include="Resources\Assets\FormImages\ApplicationBlue.ico" />
+    <Resource Include="Resources\Assets\FormImages\ApplicationBlue.png" />
+    <Resource Include="Resources\Assets\FormImages\AppropriationTile.png" />
+    <Resource Include="Resources\Assets\FormImages\Badger.png" />
+    <Resource Include="Resources\Assets\FormImages\budget-execution.ico" />
+    <Resource Include="Resources\Assets\FormImages\budget.png" />
+    <Resource Include="Resources\Assets\FormImages\CopyTable.png" />
+    <Resource Include="Resources\Assets\FormImages\Excel.png" />
+    <Resource Include="Resources\Assets\FormImages\FooterImage.png" />
+    <Resource Include="Resources\Assets\FormImages\HeaderImage.png" />
+    <Resource Include="Resources\Assets\FormImages\Main.png" />
+    <Resource Include="Resources\Assets\FormImages\PDF.png" />
+    <Resource Include="Resources\Assets\FormImages\Reversal.png" />
+    <Resource Include="Resources\Assets\FormImages\SqlCeData.png" />
+    <Resource Include="Resources\Assets\FormImages\SQLiteData.png" />
+    <Resource Include="Resources\Assets\FormImages\SqlServerData.png" />
+    <Resource Include="Resources\Assets\FormImages\TableSetting.png" />
+    <Resource Include="Resources\Assets\FormImages\TransferData.png" />
+    <Resource Include="Resources\Assets\GitHubImages\access.png" />
+    <Resource Include="Resources\Assets\GitHubImages\Analysis.png" />
+    <Resource Include="Resources\Assets\GitHubImages\baby.png" />
+    <Resource Include="Resources\Assets\GitHubImages\Badger.png" />
+    <Resource Include="Resources\Assets\GitHubImages\Calculation.png" />
+    <Resource Include="Resources\Assets\GitHubImages\Calculator.PNG" />
+    <Resource Include="Resources\Assets\GitHubImages\calendar.png" />
+    <Resource Include="Resources\Assets\GitHubImages\csharp.png" />
+    <Resource Include="Resources\Assets\GitHubImages\DataTable.png" />
+    <Resource Include="Resources\Assets\GitHubImages\document.png" />
+    <Resource Include="Resources\Assets\GitHubImages\documentation.png" />
+    <Resource Include="Resources\Assets\GitHubImages\edit.png" />
+    <Resource Include="Resources\Assets\GitHubImages\epa.png" />
+    <Resource Include="Resources\Assets\GitHubImages\excel.png" />
+    <Resource Include="Resources\Assets\GitHubImages\features.png" />
+    <Resource Include="Resources\Assets\GitHubImages\Maps.png" />
+    <Resource Include="Resources\Assets\GitHubImages\ProjectTemplate.png" />
+    <Resource Include="Resources\Assets\GitHubImages\ProjectTemplates.png" />
+    <Resource Include="Resources\Assets\GitHubImages\Providers.png" />
+    <Resource Include="Resources\Assets\GitHubImages\sql.png" />
+    <Resource Include="Resources\Assets\GitHubImages\system_requirements.png" />
+    <Resource Include="Resources\Assets\GitHubImages\tools.png" />
+    <Resource Include="Resources\Assets\GitHubImages\web.png" />
+    <Resource Include="Resources\Assets\LoaderImages\earth.gif" />
+    <Resource Include="Resources\Assets\LoaderImages\Loading.gif" />
+    <Resource Include="Resources\Assets\LoaderImages\Processing.gif" />
+    <Resource Include="Resources\Assets\LoaderImages\Waiting.gif" />
+    <Resource Include="Resources\Assets\MathImages\AlphaButton.png" />
+    <Resource Include="Resources\Assets\MathImages\ApproximateButton.png" />
+    <Resource Include="Resources\Assets\MathImages\AverageButton.png" />
+    <Resource Include="Resources\Assets\MathImages\BetaButton.png" />
+    <Resource Include="Resources\Assets\MathImages\DeltaButton.png" />
+    <Resource Include="Resources\Assets\MathImages\DivisionButton.png" />
+    <Resource Include="Resources\Assets\MathImages\ExponentButton.png" />
+    <Resource Include="Resources\Assets\MathImages\FunctionButton.png" />
+    <Resource Include="Resources\Assets\MathImages\GreaterThanEqualToButton.png" />
+    <Resource Include="Resources\Assets\MathImages\ImaginaryUnitButton.png" />
+    <Resource Include="Resources\Assets\MathImages\InfinityButton.png" />
+    <Resource Include="Resources\Assets\MathImages\IntegralButton.png" />
+    <Resource Include="Resources\Assets\MathImages\LessThanEqualToButton.png" />
+    <Resource Include="Resources\Assets\MathImages\MuButton.png" />
+    <Resource Include="Resources\Assets\MathImages\NotEqualButton.png" />
+    <Resource Include="Resources\Assets\MathImages\NumberButton.png" />
+    <Resource Include="Resources\Assets\MathImages\OmegaButton.png" />
+    <Resource Include="Resources\Assets\MathImages\PercntageButton.png" />
+    <Resource Include="Resources\Assets\MathImages\PhiButton.png" />
+    <Resource Include="Resources\Assets\MathImages\PiButton.png" />
+    <Resource Include="Resources\Assets\MathImages\PlusOrMinusButton.png" />
+    <Resource Include="Resources\Assets\MathImages\RankingButton.png" />
+    <Resource Include="Resources\Assets\MathImages\SampleButton.png" />
+    <Resource Include="Resources\Assets\MathImages\SigmaButton.png" />
+    <Resource Include="Resources\Assets\MathImages\StatisticsButton.png" />
+    <Resource Include="Resources\Assets\MathImages\VarianceButton.png" />
+    <Resource Include="Resources\Assets\MenuImages\CalculatorItem.png" />
+    <Resource Include="Resources\Assets\MenuImages\CalendarItem.png" />
+    <Resource Include="Resources\Assets\MenuImages\ChromeItem.png" />
+    <Resource Include="Resources\Assets\MenuImages\ClockItem.png" />
+    <Resource Include="Resources\Assets\MenuImages\CloseItem.png" />
+    <Resource Include="Resources\Assets\MenuImages\ControlPanelItem.png" />
+    <Resource Include="Resources\Assets\MenuImages\DocumentaionItem.png" />
+    <Resource Include="Resources\Assets\MenuImages\EdgeItem.png" />
+    <Resource Include="Resources\Assets\MenuImages\ExitItem.png" />
+    <Resource Include="Resources\Assets\MenuImages\FileItem.png" />
+    <Resource Include="Resources\Assets\MenuImages\FirefoxItem.png" />
+    <Resource Include="Resources\Assets\MenuImages\FolderItem.png" />
+    <Resource Include="Resources\Assets\MenuImages\MapItem.png" />
+    <Resource Include="Resources\Assets\MenuImages\MediaPlayerItem.png" />
+    <Resource Include="Resources\Assets\MenuImages\OneDriveItem.png" />
+    <Resource Include="Resources\Assets\MenuImages\RefreshItem.png" />
+    <Resource Include="Resources\Assets\MenuImages\SaveItem.png" />
+    <Resource Include="Resources\Assets\MenuImages\TaskManagerItem.png" />
+    <Resource Include="Resources\Assets\ProviderImages\Access.png" />
+    <Resource Include="Resources\Assets\ProviderImages\Excel.ico" />
+    <Resource Include="Resources\Assets\ProviderImages\Excel.png" />
+    <Resource Include="Resources\Assets\ProviderImages\SqlCe.png" />
+    <Resource Include="Resources\Assets\ProviderImages\SQLite.png" />
+    <Resource Include="Resources\Assets\ProviderImages\SqlServer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\Themes\down_arrow.png" />
+    <Resource Include="UI\Themes\Fluent\Images\noise.png" />
+    <Resource Include="UI\Themes\Fluent\Images\WindowIcon.png" />
+    <Resource Include="UI\Themes\up_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\Windows\Error\SplashNotification.png" />
+    <Resource Include="UI\Windows\File\FileBrowse.png" />
+    <Resource Include="UI\Windows\Folder\FolderBrowse.png" />
+    <Resource Include="UI\Windows\Splash\Application.png" />
+    <Resource Include="UI\Windows\Splash\SplashNotification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Libraries\LinqStatistics\LinqStatistics.dll" />
+    <Content Include="Libraries\System.Configuration\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="Libraries\System.Data\System.Data.OleDb.dll" />
+    <Content Include="Libraries\System.Data\System.Data.SQLite.dll" />
+    <Content Include="Libraries\System.Data\System.Data.SQLite.EF6.dll" />
+    <Content Include="Libraries\System.Data\System.Data.SQLite.Linq.dll" />
+    <Content Include="Libraries\System.Data\System.Data.SqlServerCe.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="UI\Windows\Main\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

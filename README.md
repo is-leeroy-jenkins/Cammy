@@ -37,7 +37,7 @@
 
 - Cammy is built on NET 8
 - Cammy supports AnyCPU as well as x86/x64 specific builds
-- [Controls](https://github.com/is-leeroy-jenkins/Cammy/tree/master/Controls) - main UI layer and associated controls and related functionality.
+- [Controls](https://github.com/is-leeroy-jenkins/Cammy/tree/master/UI/Controls) - main UI layer and associated controls and related functionality.
 - [Enumerations](https://github.com/is-leeroy-jenkins/Cammy/tree/master/Enumerations) - various enumerations used for budgetary accounting.
 - [Extensions](https://github.com/is-leeroy-jenkins/Cammy/tree/master/Extensions)- useful extension methods for budget analysis by type.
 - [Clients](https://github.com/is-leeroy-jenkins/Cammy/tree/master/Clients) - other tools used and available.

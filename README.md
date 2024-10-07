@@ -1,3 +1,4 @@
+## _
 ![](https://github.com/is-leeroy-jenkins/Cammy/blob/master/Resources/Assets/GitHubImages/ProjectTemplate.png)
 
 ## Cammy is a tool that displays a webcam feed in a WPF application that can also be used to directly scan a QR Code when displayed in front of the camera. Cammy is written in C# and released under the MIT license.
